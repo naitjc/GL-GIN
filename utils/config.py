@@ -5,16 +5,16 @@ import torch
 parser = argparse.ArgumentParser(description='Fast and Accurate Non-Autoregressive Model for Joint Multiple Intent Detection and Slot Filling')
 
 # Dataset and Other Parameters
-parser.add_argument('--data_dir', '-dd', help='dataset file path', type=str, default='./data/MixSNIPS_clean')
-parser.add_argument('--save_dir', '-sd', type=str, default='./save/MixSNIPS_clean')
+parser.add_argument('--data_dir', '-dd', help='dataset file path', type=str, default='./Dataset/MSATIS')
+parser.add_argument('--save_dir', '-sd', type=str, default='./save/MSATIS')
 parser.add_argument('--load_dir', '-ld', type=str, default=None)
-parser.add_argument('--log_dir', '-lod', type=str, default='./log/MixSNIPS')
+parser.add_argument('--log_dir', '-lod', type=str, default='./log/MSATIS')
 parser.add_argument('--log_name', '-ln', type=str, default='log.txt')
 parser.add_argument("--random_state", '-rs', help='random seed', type=int, default=72)
 parser.add_argument('--gpu', '-g', action='store_true', help='use gpu', required=False, default=False)
 
 # Training parameters.
-parser.add_argument('--num_epoch', '-ne', type=int, default=50)
+parser.add_argument('--num_epoch', '-ne', type=int, default=3)
 parser.add_argument('--batch_size', '-bs', type=int, default=16)
 parser.add_argument('--l2_penalty', '-lp', type=float, default=1e-6)
 parser.add_argument("--learning_rate", '-lr', type=float, default=0.001)
